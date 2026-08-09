@@ -1,0 +1,12 @@
+.img {
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+.head {
+  color: rgb(1, 86, 24);
+}
+.desc {
+  color: rgb(114, 66, 3);
+}

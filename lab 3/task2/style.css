@@ -1,0 +1,25 @@
+body {
+  background-color: antiquewhite;
+  width: 60%;
+}
+.recipe-title {
+  text-align: center;
+}
+.cake {
+  height: 175px;
+  width: 175px;
+}
+
+.gray {
+  background-color: rgb(71, 63, 63);
+  padding: 0;
+  border-bottom: 2px solid black;
+  color: rgb(234, 255, 1);
+}
+.link {
+  text-decoration: none;
+  color: rgb(212, 229, 29);
+}
+.comment {
+  background-color: rgb(247, 247, 35);
+}

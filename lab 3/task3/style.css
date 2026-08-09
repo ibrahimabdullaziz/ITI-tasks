@@ -1,0 +1,62 @@
+body {
+  background-color: rgb(221, 221, 250);
+}
+
+.main-container {
+  background-color: rgb(254, 254, 254);
+  text-align: center;
+}
+.logo {
+  height: 20px;
+  width: 20px;
+  margin: 0px;
+  border-radius: 50%;
+}
+.face,
+.x {
+  display: inline-block;
+  margin: 0px;
+  padding: 0px;
+  margin-bottom: 5px;
+}
+.face {
+  background-color: rgb(201, 201, 248);
+  margin-right: 5px;
+}
+.x {
+  background-color: rgb(201, 201, 248);
+  margin-left: 5px;
+}
+.or {
+  padding: 0px;
+  margin: 0px auto;
+  width: 30px;
+  height: 30px;
+  border: 0.8px solid gray;
+  background-color: rgb(183, 181, 181);
+  border-radius: 50%;
+  text-align: center;
+}
+.input {
+  width: 270px;
+  margin: 8px;
+}
+.keep {
+  display: inline-block;
+}
+.forget {
+  text-decoration: none;
+  color: gray;
+  display: inline-block;
+  margin-left: 50px;
+}
+.login-btn {
+  background-color: rgb(53, 124, 237);
+  width: 250px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.sign {
+  text-decoration: none;
+  color: rgb(3, 152, 232);
+}

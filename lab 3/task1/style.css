@@ -1,0 +1,64 @@
+body {
+  background-image: url(wall.jpg);
+}
+
+.container {
+  margin: 30px auto;
+  border: 5px solid gray;
+  text-align: center;
+  width: 65%;
+  background-color: beige;
+}
+
+.header {
+  padding: 30px;
+  background-color: lightcoral;
+  margin: 30px;
+  border-radius: 5px;
+  border: 5px solid gray;
+}
+.header-text {
+  font-family: cursive;
+}
+.links {
+  padding: 20px 50px;
+  background-color: lightcoral;
+  margin: 30px;
+  border-radius: 5px;
+  border: 5px solid gray;
+}
+.links pre {
+  color: red;
+  font-size: large;
+  margin: 0;
+}
+.body {
+  padding: 45px;
+  background-color: lightcoral;
+  margin: 30px;
+  border-radius: 5px;
+  border: 5px solid gray;
+  text-align: left;
+}
+
+.intro u {
+  border-bottom: 1.5px solid black;
+}
+.first {
+  font-size: 26px;
+}
+.paragraph {
+  font-family: "Times New Roman", Times, serif;
+}
+.red {
+  display: inline-block;
+  color: red;
+  border-bottom: 1.5px solid red;
+}
+.footer {
+  padding: 20px 50px;
+  background-color: rgb(245, 145, 145);
+  margin: 30px auto;
+  width: 65%;
+  text-align: center;
+}
