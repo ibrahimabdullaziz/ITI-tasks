@@ -8,7 +8,7 @@ for (var i = 1; i <= 30; i++) {
   }
 }
 
-var tableHTML = "<table border='1' cellpadding='8' cellspacing='0'><tr>";
+var tableHTML = "<table border='1' cellpadding='8'><tr>";
 
 for (var j = 0; j < evenNumbers.length; j++) {
   tableHTML += "<td>" + evenNumbers[j] + "</td>";
