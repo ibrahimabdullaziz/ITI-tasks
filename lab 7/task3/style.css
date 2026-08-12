@@ -1,0 +1,31 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.card {
+  background-color: #e0ab9f;
+  width: 300px;
+  padding: 20px;
+  margin: 20px auto;
+}
+
+.card img {
+  width: 100%;
+}
+
+.hobbies {
+  text-align: left;
+  margin: 15px 0;
+}
+
+.buttons {
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  padding: 5px 10px;
+  cursor: pointer;
+}
