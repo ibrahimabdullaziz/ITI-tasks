@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Register</title>
+  </head>
+
+  <body>
+    <div id="form">
+      <p>
+        Enter your name:
+        <input type="text" id="name" />
+      </p>
+
+      <p>
+        Enter your age:
+        <input type="number" id="age" />
+      </p>
+
+      <p>Select your Gender:</p>
+
+      <img src="male.jpg" width="150" />
+      <input type="radio" id="male" name="gender" value="male" checked />
+
+      <img src="female.jpg" width="150" />
+      <input type="radio" name="gender" value="female" />
+
+      <br /><br />
+
+      <p>
+        Select your favorite color:
+        <select id="color">
+          <option>Red</option>
+          <option>Blue</option>
+          <option>Green</option>
+        </select>
+      </p>
+
+      <button id="register">Register</button>
+    </div>
+
+    <div id="result"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
