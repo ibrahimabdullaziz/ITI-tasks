@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Tasks</title>
+  </head>
+  <body>
+    <h2>Task 1: Array Operations</h2>
+    <button onclick="runTask1()">Run Array Operations</button>
+
+    <hr />
+    <h2>Task 2: Rest Operator Calculator</h2>
+    <button onclick="runTask2()">Run Calculator</button>
+
+    <hr />
+    <h2>Task 3: Project Object</h2>
+    <button onclick="runTask3()">Run Print Project</button>
+
+    <script>
+      function runTask1() {
+        let numbers = [12, 85, 43, 99, 5, 60, 22];
+
+        let ascending = [...numbers].sort((a, b) => a - b);
+        let descending = [...numbers].sort((a, b) => b - a);
+        let largerThan50 = numbers.filter((num) => num > 50);
+
+        let maxNum = Math.max(...numbers);
+        let minNum = Math.min(...numbers);
+
+        console.log("Original numbers:", numbers);
+        console.log("Ascending:", ascending);
+        console.log("Descending:", descending);
+        console.log("Larger than 50:", largerThan50);
+        console.log("Max:", maxNum, "| Min:", minNum);
+      }
+
+      function calculate(operator, ...nums) {
+        let result = nums.reduce((acc, curr) => {
+          if (operator === "+") return acc + curr;
+          if (operator === "-") return acc - curr;
+          if (operator === "*") return acc * curr;
+          if (operator === "/") return acc / curr;
+          return acc;
+        });
+
+        let opName =
+          operator === "+"
+            ? "sum"
+            : operator === "-"
+              ? "minus"
+              : operator === "*"
+                ? "multiply"
+                : "division";
+
+        console.log(
+          `result of ${opName} operation for ${nums.join(",")} is ${result}`,
+        );
+      }
+
+      function runTask2() {
+        calculate("+", 3, 1, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9);
+        calculate("-", 100, 12, 23, 1, 2, 4);
+        calculate("*", 4, 5, 7, 1, 6);
+        calculate("/", 1000, 5, 4, 2, 1, 6);
+      }
+
+      function runTask3() {
+        const id = prompt("Enter Project id:");
+        const name = prompt("Enter Project Name:");
+        const dur = prompt("Enter Duration:");
+
+        const project = {
+          projectId: id,
+          projectName: name,
+          duration: dur,
+          printData() {
+            console.log(
+              `Project ID: ${this.projectId}, Name: ${this.projectName}, Duration: ${this.duration}`,
+            );
+          },
+        };
+
+        project.printData();
+      }
+    </script>
+  </body>
+</html>
