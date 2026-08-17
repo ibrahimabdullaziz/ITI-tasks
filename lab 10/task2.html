@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Task 2</title>
+  </head>
+  <body>
+    <script>
+      console.log("=== arguments ===");
+      function showArgs() {
+        console.log("arguments object:", arguments);
+        console.log("Converted using Array.from:", Array.from(arguments));
+        console.log("Converted using spread:", [...arguments]);
+      }
+      showArgs(10, 20, 30, 40);
+
+      console.log("=== rest Parameter ===");
+      function showRest(...args) {
+        console.log("Rest parameter:", args);
+      }
+      showRest(10, 20, 30, 40);
+
+      console.log("=== Arrow Function ===");
+      var arrowFunc = () => {
+        console.log(arguments);
+      };
+      arrowFunc(10, 20);
+    </script>
+  </body>
+</html>

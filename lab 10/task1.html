@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Task 1</title>
+  </head>
+  <body>
+    <script>
+      console.log("===> non-strict mode");
+      function globalFunc() {
+        console.log("Global Function :", this);
+      }
+      globalFunc();
+
+      ///////////////////////////////////////
+
+      var obj1 = {
+        name: "Normal object",
+        logThis: function () {
+          console.log("Object method :", this);
+        },
+      };
+      obj1.logThis();
+
+      //////////////////////////////////////////
+
+      var obj2 = {
+        name: "Arrow",
+        logThis: () => {
+          console.log("Arrow Function :", this);
+        },
+      };
+      obj2.logThis();
+
+      console.log("===> strict mode");
+
+      function strictFunc() {
+        "use strict";
+        console.log("Strict Function :", this);
+      }
+      strictFunc();
+    </script>
+  </body>
+</html>
