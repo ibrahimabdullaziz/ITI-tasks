@@ -1,0 +1,30 @@
+.container {
+  max-width: 700px;
+  margin: 10px auto;
+}
+
+.input-box {
+  margin-bottom: 20px;
+}
+
+input,
+button {
+  padding: 6px;
+  margin: 5px;
+}
+
+.result-box {
+  border: 1px solid #5d5c5c;
+  padding: 10px;
+}
+
+.user-card,
+.post-card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+span {
+  font-weight: bold;
+}
