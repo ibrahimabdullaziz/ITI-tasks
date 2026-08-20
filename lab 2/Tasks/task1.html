@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Video Player</title>
+    <link rel="stylesheet" href="task1.css">
+</head>
+<body>
+    <section class="player-container">
+        <header>
+            <h2>🎬 Modern Video Player</h2>
+        </header>
+        
+        <video id="myVideo" width="600" src="video.mp4"></video>
+        
+        <div class="controls">
+            <div class="btn-group">
+                <input type="button" value="► Play" id="playBtn">
+                <input type="button" value="II Pause" id="pauseBtn">
+                <input type="button" value="■ Stop" id="stopBtn">
+                <input type="button" value="🔇 Mute" id="muteBtn">
+                <input type="button" value="🔁 Loop" id="loopBtn">
+                <input type="button" value="⛶ Fullscreen" id="fullscreenBtn">
+                
+                <span id="speedParent" class="inline-group">
+                    <input type="button" value="0.5x">
+                    <input type="button" value="1x">
+                    <input type="button" value="2x">
+                </span>
+            </div>
+
+            <div class="slider-group">
+                <p class="label">Volume</p>
+                <input type="range" id="volumeSlider" min="0" max="1" step="0.1" value="1">
+            </div>
+
+            <div class="slider-group">
+                <p class="label">Progress</p>
+                <input type="range" id="progressSlider" min="0" max="100" value="0" step="0.1">
+            </div>
+
+            <div class="btn-group center">
+                <span id="sizeParent" class="inline-group">
+                    <input type="button" value="Small">
+                    <input type="button" value="Medium">
+                    <input type="button" value="Large">
+                </span>
+            </div>
+            
+            <div class="time-display">
+                <span id="currentTime" class="left-time">00:00</span>
+                <span id="duration" class="right-time">00:00</span>
+            </div>
+        </div>
+    </section>
+    
+    <script src="task1.js"></script>
+</body>
+</html>
