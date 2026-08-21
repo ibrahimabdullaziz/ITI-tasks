@@ -1,0 +1,71 @@
+body {
+  font-family: sans-serif;
+  padding: 30px;
+}
+
+.controls {
+  margin-bottom: 20px;
+}
+
+input[type="button"] {
+  background-color: #5b9bd5;
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.container {
+  width: 400px;
+  height: 300px;
+  border: 1px dashed #ccc;
+  position: relative;
+}
+
+#box {
+  width: 120px;
+  height: 70px;
+  background-color: #ed7d31;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+@keyframes squareMove {
+  0% {
+    top: 0;
+    left: 0;
+    background-color: #ed7d31;
+  }
+  25% {
+    top: 0;
+    left: 280px;
+    background-color: #70ad47;
+  }
+  50% {
+    top: 230px;
+    left: 280px;
+    background-color: #00a2e8;
+  }
+  75% {
+    top: 230px;
+    left: 0;
+    background-color: #ffc000;
+  }
+  100% {
+    top: 0;
+    left: 0;
+    background-color: #ed7d31;
+  }
+}
+
+#box.running {
+  animation: squareMove 4s linear infinite;
+  animation-play-state: running;
+}
+
+#box.paused {
+  animation-play-state: paused;
+}

@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Gallery</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1>React Group</h1>
+        <input type="button" value="Register" class="register-btn" />
+      </div>
+    </section>
+
+    <section class="locations-section">
+      <h2>ITI Locations</h2>
+      <p class="subtitle">ITI Main Locations all over the country</p>
+
+      <div class="locations-container">
+        <div class="map-box">
+          <img
+            src="map.png"
+            alt="Map of Egypt showing ITI branch locations"
+            class="map-image"
+          />
+        </div>
+
+        <div class="locations-list">
+          <div class="location-card" id="smartVillageCard">
+            📍 ITI - Smart Village
+          </div>
+          <div class="location-card">📍 ITI - Alexandria</div>
+          <div class="location-card">📍 ITI - Assuit</div>
+          <div class="location-card">📍 ITI - Aswan</div>
+          <div class="location-card">📍 ITI - Ismailia</div>
+          <div class="location-card">📍 ITI - Mansoura</div>
+          <div class="location-card">📍 ITI - Menofia</div>
+          <div class="location-card">📍 ITI - Minya</div>
+        </div>
+      </div>
+
+      <div class="legend">
+        <span id="mainBranchBtn" class="legend-item">
+          <span class="color-box red"></span> Main Branch
+        </span>
+        <span id="branchBtn" class="legend-item">
+          <span class="color-box blue"></span> Branch
+        </span>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-col">
+          <h3>CONTACT US</h3>
+          <p>📍 Kafr Elshiekh - Egypt</p>
+          <p>📞 (+20) 102 4642 180</p>
+
+          <p>✉️ ibrahimab</p>
+        </div>
+        <div class="footer-col">
+          <h3>FOLLOW US</h3>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
