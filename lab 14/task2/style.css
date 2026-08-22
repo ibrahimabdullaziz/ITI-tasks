@@ -1,0 +1,52 @@
+body {
+  margin: 20px;
+  font-family: sans-serif;
+}
+
+.box {
+  width: 100%;
+  min-height: 150px;
+  border: 2px solid #000;
+  margin-bottom: 20px;
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.orange-box {
+  background-color: #ffa500;
+}
+
+.gray-box {
+  background-color: #e6e6e6;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+img {
+  width: 100px;
+  height: 130px;
+  cursor: grab;
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  transform: rotate(360deg);
+}
+
+.dragging {
+  opacity: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+#emptyMsg {
+  font-size: 20px;
+  font-weight: bold;
+  color: #555;
+}
