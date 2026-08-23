@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Walter White - Profile</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      @media screen and (min-width: 992px) and (max-width: 1035px) {
+        #cards > .col-12 {
+          flex: 0 0 auto;
+          width: 25%;
+        }
+
+        #cards > .col-12 > .row > div {
+          flex: 0 0 auto;
+          width: 100%;
+        }
+
+        #cards > .col-12 > .row > div:first-child {
+          order: 2 !important;
+        }
+
+        #cards > .col-12 > .row > div:last-child {
+          order: 1 !important;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-light-subtle">
+    <div class="my-3 bg-white p-3 border rounded">
+      <nav id="navbar" class="row g-2 mb-3"></nav>
+
+      <div
+        class="text-white p-4 mb-4 rounded"
+        style="
+          background: url(&quot;images/hero.jpg&quot;) center/cover no-repeat;
+          min-height: 250px;
+        "
+      >
+        <h1 class="text-end">Walter White</h1>
+        <h3 class="text-end">Chemistry Teacher & Cook</h3>
+      </div>
+
+      <div id="cards" class="row g-4"></div>
+
+      <script>
+        const navbarClasses =
+          "btn bg-primary-subtle text-dark w-100 border border-2 border-white shadow-sm";
+        const navbarItems = [
+          "Walter White works",
+          "Walter White cooks",
+          "Walter White life",
+          "Walter White family",
+        ];
+        const navbar = document.getElementById("navbar");
+
+        for (let i = 0; i < navbarItems.length; i++) {
+          navbar.innerHTML += `
+            <div class="col-12 col-md-3">
+              <a href="#" class="${navbarClasses}" style="border-radius: 15px 0 15px 0">
+                ${navbarItems[i]}
+              </a>
+            </div>`;
+        }
+
+        const cards = [
+          { image: "images/2.jpg" },
+          { image: "images/3.jpg" },
+          { image: "images/4.jpg" },
+          { image: "images/1.jpg" },
+        ];
+
+        const cardsContainer = document.getElementById("cards");
+
+        for (let i = 0; i < cards.length; i++) {
+          cardsContainer.innerHTML += `
+            <div class="col-12 col-md-3 col-lg-6">
+              <div class="row g-2 align-items-center">
+                <div class="col-8 col-md-12 col-lg-8 order-md-2 order-lg-1">
+                  <h5 class="fw-bold">Walter White</h5>
+                  <p class="small text-secondary mb-0">
+                    Walter White is a high school chemistry teacher from
+                    Albuquerque, New Mexico.
+                  </p>
+                </div>
+                <div class="col-4 col-md-12 col-lg-4 text-center order-md-1 order-lg-2">
+                  <div class="ratio ratio-4x3">
+                    <img
+                      src="${cards[i].image}"
+                      class="w-100 h-100 object-fit-cover border p-1 rounded"
+                      alt="Walter White"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>`;
+        }
+      </script>
+
+      <footer class="text-center py-3 mt-4 text-white rounded bg-primary">
+        <p class="mb-0 small">Walter White profile</p>
+      </footer>
+    </div>
+  </body>
+</html>
