@@ -1,0 +1,15 @@
+{
+  "socialLinks": [
+    { "name": "GitHub", "url": "https://github.com" },
+    { "name": "Frontend Mentor", "url": "https://frontendmentor.io" },
+    { "name": "LinkedIn", "url": "https://linkedin.com" },
+    { "name": "Twitter", "url": "https://twitter.com" },
+    { "name": "Instagram", "url": "https://instagram.com" }
+  ],
+  "profile": {
+    "name": "Ibrahim Abdullaziz",
+    "location": "kafr Elshiekh - Egypt",
+    "title": "Full Stack Developer - Software Engineer",
+    "bio": "full stack developer and software engineer"
+  }
+}
