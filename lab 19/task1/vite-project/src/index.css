@@ -1,0 +1,289 @@
+/* ─── Design Tokens ──────────────────────────────────────────────────── */
+:root {
+  --bg: hsl(207, 26%, 17%);
+  --surface: hsl(209, 23%, 22%);
+  --text: hsl(0, 0%, 100%);
+  --text-muted: hsl(0, 0%, 80%);
+  --input-bg: hsl(209, 23%, 22%);
+  --shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+  --radius: 8px;
+  --font: "Nunito Sans", sans-serif;
+  --transition: 0.2s ease;
+}
+
+/* ─── Reset ──────────────────────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font);
+  background-color: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button {
+  cursor: pointer;
+  font-family: var(--font);
+}
+
+/* ─── Layout ─────────────────────────────────────────────────────────── */
+.page-wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* ─── Topbar ─────────────────────────────────────────────────────────── */
+.topbar {
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.topbar__inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 48px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.topbar__title {
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+}
+
+/* ─── Controls ───────────────────────────────────────────────────────── */
+.controls {
+  padding: 28px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* Search */
+.search-field {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: 14px 24px;
+  box-shadow: var(--shadow);
+  width: min(480px, 100%);
+  transition: box-shadow var(--transition);
+}
+
+.search-field:focus-within {
+  box-shadow: 0 0 0 2px hsl(207, 60%, 55%);
+}
+
+.search-icon {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+
+.search-field input {
+  background: none;
+  border: none;
+  outline: none;
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 0.875rem;
+  width: 100%;
+}
+
+.search-field input::placeholder {
+  color: var(--text-muted);
+}
+
+/* Region select */
+.region-select {
+  background: var(--surface);
+  border: none;
+  border-radius: var(--radius);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 14px 48px 14px 20px;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  outline: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23ffffff' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  transition: box-shadow var(--transition);
+  min-width: 200px;
+}
+
+.region-select:focus {
+  box-shadow: 0 0 0 2px hsl(207, 60%, 55%);
+}
+
+.region-select option {
+  background: var(--surface);
+  color: var(--text);
+}
+
+/* ─── Results count ──────────────────────────────────────────────────── */
+.results-count {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 48px 16px;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* ─── Card Grid ──────────────────────────────────────────────────────── */
+.card-grid {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 48px 64px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 40px;
+}
+
+/* ─── Country Card ───────────────────────────────────────────────────── */
+.country-card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.country-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
+}
+
+.country-card__flag {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.country-card__flag--emoji {
+  aspect-ratio: 16 / 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  background: hsl(209, 23%, 27%);
+}
+
+.country-card__body {
+  padding: 20px 24px 32px;
+}
+
+.country-card__name {
+  font-size: 1rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.country-card__info p {
+  font-size: 0.85rem;
+  margin-bottom: 4px;
+  color: var(--text-muted);
+}
+
+.country-card__info span {
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* ─── Status States ──────────────────────────────────────────────────── */
+.status-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 80px 48px;
+  text-align: center;
+}
+
+.status-container--error {
+  color: hsl(0, 70%, 65%);
+}
+
+.spinner {
+  width: 48px;
+  height: 48px;
+  border: 4px solid hsl(209, 23%, 30%);
+  border-top-color: hsl(207, 60%, 55%);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin: 0 auto 16px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.status-text {
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.empty-state {
+  color: var(--text-muted);
+  font-size: 1rem;
+  padding: 60px 48px;
+  text-align: center;
+}
+
+/* ─── Responsive ─────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .topbar__inner,
+  .controls,
+  .results-count,
+  .card-grid {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-field {
+    width: 100%;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 24px;
+  }
+}
