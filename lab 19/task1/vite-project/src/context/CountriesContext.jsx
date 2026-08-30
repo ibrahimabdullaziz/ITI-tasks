@@ -17,6 +17,7 @@ function normalize(entry) {
 }
 
 export function CountriesProvider({ children }) {
+  //Three-State Pattern
   const [countries, setCountries] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");

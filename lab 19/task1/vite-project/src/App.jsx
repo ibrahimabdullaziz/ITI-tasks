@@ -19,8 +19,7 @@ function App() {
       const name = country.name?.common?.toLowerCase() ?? "";
       const capital = country.capital?.[0]?.toLowerCase() ?? "";
 
-      const matchesSearch =
-        query === "" || name.includes(query) || capital.includes(query);
+      const matchesSearch = name.includes(query) || capital.includes(query);
       const matchesRegion =
         selectedRegion === "All" || country.region === selectedRegion;
 
